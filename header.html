@@ -1,0 +1,194 @@
+<div class="header_main" id="header_main_pg">
+
+</div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>IJESD</title>
+<meta name="keywords" content="Biodiversity Watch" />
+<meta name="description" content="Biodiversity Watch" />
+<!-- <link href="css/reset.css" rel="stylesheet" type="text/css" />-->
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/nav.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.sgallery.js"></script>
+<script type="text/javascript" src="js/search_common.js"></script>
+<script type="text/javascript" src="js/box.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+
+<!-- / fim dos arquivos utilizados pelo jQuery lightBox plugin -->
+
+
+
+<!-- Ativando o jQuery lightBox plugin -->
+
+<script type="text/javascript">
+    $(function() {
+
+        $('#gallery a').lightBox();
+
+    });
+</script>
+
+<style type="text/css">
+    /* jQuery lightBox plugin - Gallery style */
+    
+    #gallery {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    #gallery ul {
+        list-style: none;
+    }
+    
+    #gallery ul li {
+        display: inline;
+    }
+    
+    #gallery ul img {
+        border: 5px solid #3e3e3e;
+        border-width: 5px 5px 20px;
+        margin: 10px;
+    }
+    
+    #gallery ul a:hover img {
+        border: 5px solid #fff;
+        border-width: 5px 5px 20px;
+        color: #fff;
+    }
+    
+    #gallery ul a:hover {
+        color: #fff;
+    }
+</style>
+<script type="text/javascript">
+    /*** 
+
+            Simple jQuery Slideshow Script
+
+            Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+
+        ***/
+
+
+    function slideSwitch() {
+
+        var $active = $('#slideshow DIV.active');
+
+
+
+        if ($active.length == 0) $active = $('#slideshow DIV:last');
+
+
+
+        // use this to pull the divs in the order they appear in the markup
+
+        var $next = $active.next().length ? $active.next()
+
+        : $('#slideshow DIV:first');
+
+
+
+        // uncomment below to pull the divs randomly
+
+        // var $sibs  = $active.siblings();
+
+        // var rndNum = Math.floor(Math.random() * $sibs.length );
+
+        // var $next  = $( $sibs[ rndNum ] );
+
+
+
+
+
+        $active.addClass('last-active');
+
+
+
+        $next.css({
+            opacity: 0.0
+        })
+
+        .addClass('active')
+
+        .animate({
+            opacity: 1.0
+        }, 1000, function() {
+
+            $active.removeClass('active last-active');
+
+        });
+
+
+        var $active1 = $('#slideshow1 DIV.active1');
+        if ($active1.length == 0) $active1 = $('#slideshow1 DIV:last');
+        // use this to pull the divs in the order they appear in the markup
+        var $next1 = $active1.next().length ? $active1.next() :
+            $('#slideshow1 DIV:first');
+        $active1.addClass('last-active1');
+        $next1.css({
+                opacity: 0.0
+            })
+            .addClass('active1')
+            .animate({
+                opacity: 1.0
+            }, 1000, function() {
+                $active1.removeClass('active1 last-active1');
+            });
+    }
+
+
+
+    $(function() {
+
+        setInterval("slideSwitch()", 5000);
+
+    });
+</script>
+
+
+
+<style type="text/css">
+    /*** set the width and height to match your images **/
+    
+    #main_sl {
+        margin: auto;
+        width: 980px;
+        height: 230px;
+    }
+    
+    #slideshow {
+        position: relative;
+        height: 230px;
+    }
+    
+    #slideshow DIV {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 8;
+        opacity: 0.0;
+        height: 230px;
+        background-color: #FFF;
+    }
+    
+    #slideshow DIV.active {
+        z-index: 10;
+        opacity: 1.0;
+    }
+    
+    #slideshow DIV.last-active {
+        z-index: 9;
+    }
+    
+    #slideshow DIV IMG {
+        height: 230px;
+        display: block;
+        border: 0;
+    }
+</style>

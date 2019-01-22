@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<title>Biodiversity Watch | </title>
+
+<head>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <div class="header_main" id="header_main_pg"></div>
+</head>
+
+<body>
+    <!-- top menu + slider -->
+    <div class="top_mun" id="top_menu_bar"></div>
+
+    <!-- top end -->
+
+    <div class="w980 main">
+
+        <div class="body" id="left_body"></div>
+
+        <div class="declaration" id="declaration_right_body"></div>
+
+        <div class="clear"></div>
+    </div>
+    <!-- foot -->
+    <div class="footer" id="footer_pg"></div>
+
+    <!--foot end  -->
+</body>
+<script>
+    $(function() {
+        $("#header_main_pg").load("header.html");
+        $("#left_body").load("left_body.html");
+        $("#footer_pg").load("footer.html");
+        $("#top_menu_bar").load("top_menu_bar.html");
+        $("#declaration_right_body").load("declaration_right_body.html");
+
+    });
+</script>
+
+</html>

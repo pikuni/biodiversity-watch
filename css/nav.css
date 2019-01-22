@@ -1,0 +1,59 @@
+#bdw
+{	margin: 0;
+	padding: 0;
+	
+}
+#bdw li{	
+float: left;
+		list-style: none;
+		text-align:left;
+		white-space:nowrap;
+		padding-top:6px;
+}
+.bclass{
+	font-size:15px;
+	font-weight:bold;
+	text-indent:13px;
+}
+	#bdw li a
+	{
+	display: block;
+	padding:5px 7px;
+
+		}
+
+	#bdw li a:hover
+	{	
+	
+	color:#FFFF00
+	}
+		
+		#bdw li ul
+		{	margin: 0;
+			padding: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index:1000;
+	background-image:url('../images/nav_2.png');
+      background-repeat:no-repeat;
+      padding-top:8px;
+			}
+		
+			#bdw li ul li
+			{	float: none;
+				display: inline;
+	
+			
+				}
+			
+			#bdw li ul li a
+			{	width: auto;
+				color: #fff;
+				border-bottom:1px   #8C8C00 solid
+				
+				}
+			
+			#bdw li ul li a:hover
+			{	
+			
+			}
